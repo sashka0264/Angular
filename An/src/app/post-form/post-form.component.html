@@ -1,0 +1,23 @@
+<div class="form">
+  <input 
+    #myTitle 
+    class="form-title" 
+    [(ngModel)]="title" 
+    type="text" 
+    placeholder="Введите название"
+  >
+  <input 
+    #myText 
+    class="form-text" 
+    [(ngModel)]="text" 
+    type="text" 
+    placeholder="Введите текст"
+  >  
+
+  <div>
+    <button (click)="addPost()" class="form-button">Создайте пост ↓</button>
+    <button (click)="focusTitle()" class="form-button">Фокус на "title"</button>
+    <button (click)="focusText()" class="form-button">Фокус на "text"</button>
+  </div>
+</div>
+

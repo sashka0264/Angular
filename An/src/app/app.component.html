@@ -1,0 +1,16 @@
+<div class="container">
+  <app-post-form 
+    (onAdd)="updatePosts($event)"
+  ></app-post-form>
+
+  <app-post 
+    *ngFor="let item of posts"
+    [post]="item"
+    (onDelete)="deletePost($event)"
+  >
+    <span *ngIf="item.text.length > 10; else short">Большой пост</span>
+    <ng-template #short>
+      <span>Маленький пост</span>
+    </ng-template>
+  </app-post>
+</div>

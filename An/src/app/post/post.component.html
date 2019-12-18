@@ -1,0 +1,7 @@
+<div class="card">
+  <span class="card-title">{{post.title}}</span>
+  <div class="card-text">{{post.text}}</div>
+  <ng-content></ng-content>
+  <button (click)="removePost()" class="card-delete">&times;</button>
+</div>
+
